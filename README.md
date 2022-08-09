@@ -12,6 +12,9 @@
   - port: 访问端口
   - `PHOTOPRISM_ADMIN_PASSWORD`: 访问密码
 - [青龙面板](./docker/qinglong/docker-compose.yml) 默认端口 5700
+- [pi-hole](./docker/pi-hole/docker-compose.yml) 搭建私有 DNS 服务器，可以添加 Local DNS 改变 dns 记录。搭建的时候只需要修改访问密码。[官方仓库](https://github.com/pi-hole/docker-pi-hole)
+- [bitwarden](./docker/bitwarden/docker-compose.yml) 搭建私有密码管理服务，拥有众多客户端，要求服务通过 https 访问，[docker hub](https://hub.docker.com/r/vaultwarden/server)地址
+- [gotify](./docker/gotify/docker-compose.yml) 搭建私有消息服务器，[官方仓库](https://github.com/gotify/server)
 
 ### 油猴脚本
 

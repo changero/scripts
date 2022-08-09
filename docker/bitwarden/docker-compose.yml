@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  bitwarden:
+    image: vaultwarden/server
+    ports:
+      - 8100:80
+    volumes:
+      - '$PWD:/data/'
+    restart: unless-stopped
