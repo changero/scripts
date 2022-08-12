@@ -1,15 +1,15 @@
-version: "3"
+version: '3'
 
 services:
-        qinglong:
-                image: whyour/qinglong:2.10.13
-                volumes:
-                        - "./ql/config:/ql/config"
-                        - "./ql/log:/ql/log"
-                        - "./ql/db:/ql/db"
-                        - "./ql/repo:/ql/repo"
-                        - "./ql/raw:/ql/raw"
-                        - "./ql/scripts:/ql/scripts"
-                restart: unless-stopped
-                ports:
-                        - "5700:5700"
+  qinglong:
+    image: whyour/qinglong:2.10.13
+    volumes:
+      - './ql/config:/ql/config'
+      - './ql/log:/ql/log'
+      - './ql/db:/ql/db'
+      - './ql/repo:/ql/repo'
+      - './ql/raw:/ql/raw'
+      - './ql/scripts:/ql/scripts'
+    restart: unless-stopped
+    ports:
+      - '5700:5700'

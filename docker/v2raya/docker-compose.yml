@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  v2raya:
+    image: mzz2017/v2raya
+    ports:
+      - '2017:2017'
+      - '20170-20172:20170-20172'
+    restart: unless-stopped
+    volumes:
+      - './v2raya:/etc/v2raya'
