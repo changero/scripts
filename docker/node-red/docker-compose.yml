@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nodered:
+    image: nodered/node-red
+    container_name: nodered
+    ports:
+      - '8180:1880'
+    volumes:
+      - './:/data'
+    restart: unless-stopped
+    user: root
+    environment:
+      - TZ=Asia/Shanghai
