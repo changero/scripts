@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - '$PWD/data:/var/lib/postgresql'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 'passwd'
+      ALLOW_IP_RANGE: '0.0.0.0/0'

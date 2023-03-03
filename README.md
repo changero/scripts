@@ -17,6 +17,15 @@
 - [gotify](./docker/gotify/docker-compose.yml) 搭建私有消息服务器，[官方仓库](https://github.com/gotify/server)
 - [v2raya](./docker/v2raya/docker-compose.yml) 在 linux 搭建 v2ray 客户端
 - [nodered](./docker/node-red/docker-compose.yml)
+- [mongodb](./docker/mongodb/docker-compose.yml)
+  - MONGO_INITDB_ROOT_USERNAME： 用户名
+  - MONGO_INITDB_ROOT_PASSWORD： 密码
+- [snapdrop](./docker/snapdrop/docker-compose.yml) 自己搭建一个共享客户端，只要在同一个 wifi 环境下，就能共享文件。[https://snap.bianqu.tk/](https://snap.bianqu.tk/)
+- [jellyfin](./docker/jellyfin/docker-compose.yml) 流媒体服务
+- [postgres](./docker/postgres/docker-compose.yml) 数据库，参考[链接](https://blog.csdn.net/yetyrain/article/details/105642488)
+  - POSTGRES_USER: 用户
+  - POSTGRES_PASSWORD: 密码
+  - 访问链接：postgres://用户:密码@postgres:端口
 
 ### 油猴脚本
 
@@ -28,6 +37,8 @@
 
 - [懒人专用](./tampermonkey/lanren.js) 多功能脚本，音乐、视频 VIP，百度网盘直链提取，官方[连接](https://greasyfork.org/zh-CN/scripts/370634-%E6%87%92%E4%BA%BA%E4%B8%93%E7%94%A8-%E5%85%A8%E7%BD%91vip%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E7%A0%B4%E8%A7%A3%E5%8E%BB%E5%B9%BF%E5%91%8A-%E5%85%A8%E7%BD%91%E9%9F%B3%E4%B9%90%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD-%E7%9F%A5%E4%B9%8E%E5%A2%9E%E5%BC%BA-%E7%9F%AD%E8%A7%86%E9%A2%91%E6%97%A0%E6%B0%B4%E5%8D%B0%E4%B8%8B%E8%BD%BD-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E7%AD%89%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%B7%A5%E5%85%B7%E7%AE%B1-%E5%8A%9F%E8%83%BD%E5%8F%AF%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%85%B3-%E9%95%BF%E6%9C%9F%E6%9B%B4%E6%96%B0-%E6%94%BE%E5%BF%83%E4%BD%BF%E7%94%A8-v5-4)
 
-- [百度云盘播放器](./tampermonkey/baidu_yun_player.js) 修改百度云盘播放器，官方[连接](https://greasyfork.org/zh-CN/scripts/441747-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8)
+- [百度网盘视频播放器](./tampermonkey/baidu_yun_player.js) 修改百度云盘播放器，官方[连接](https://greasyfork.org/zh-CN/scripts/441747-%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8)
+
+- [BD 网盘视频播放器](./tampermonkey/baidu_yun_player2.js) 去掉了弹窗，官方[连接](https://greasyfork.org/zh-CN/scripts/455103-bd%E7%BD%91%E7%9B%98%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8)
 
 - [宝塔图片下载](./tampermonkey/bt_img_download.js) 从宝塔下载图片，自用脚本

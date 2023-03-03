@@ -1,0 +1,8 @@
+version: '3'
+services:
+  snadrop:
+    image: 'linuxserver/snapdrop'
+    ports:
+      - '8018:80'
+    restart: 'unless-stopped'
+    container_name: 'snapdrop'
