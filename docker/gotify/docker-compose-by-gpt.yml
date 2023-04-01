@@ -1,0 +1,31 @@
+version: '3'
+services:
+  db:
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_DB: gotify
+      POSTGRES_USER: gotify
+      POSTGRES_PASSWORD: changeme
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  server:
+    image: gotify/server
+    ports:
+      - '80:80'
+      - '443:443'
+    depends_on:
+      - db
+    environment:
+      GOTIFY_DB_HOST: db
+      GOTIFY_DB_PORT: 5432
+      GOTIFY_DB_USERNAME: gotify
+      GOTIFY_DB_PASSWORD: changeme
+      GOTIFY_DB_DATABASE: gotify
+      GOTIFY_APP_SECRET: changeme
+      GOTIFY_CERT_FILE: /certs/cert.pem
+      GOTIFY_KEY_FILE: /certs/key.pem
+    volumes:
+      - cert-data:/certs
+volumes:
+  db-data:
+  cert-data:

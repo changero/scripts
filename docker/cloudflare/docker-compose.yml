@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  bitwarden:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare
+    volumes:
+      - ./cloudflared:/etc/cloudflared
+    command: tunnel --config /etc/cloudflared/config.yaml --no-autoupdate run --token <token>
+    restart: unless-stopped
